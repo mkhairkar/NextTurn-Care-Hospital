@@ -65,7 +65,7 @@ namespace PractoFinal.Controllers
 
 
                 
-                if (isValidUser.Email == "phaniveludurthi@gmail.com")
+                if (isValidUser.Email == "mayurkhairkar66@gmail.com")
                 {
                     return RedirectToAction("Index", "Doctors", new { area = "" });
                 }
@@ -96,11 +96,11 @@ namespace PractoFinal.Controllers
         {
             using (var dataContext = new PractoEntities3())
             {
-                /*Signup user1 = dataContext.Signups.Where(x => x.Email == "phaniveludurthi@gmail.com"
+                /*Signup user1 = dataContext.Signups.Where(x => x.Email == "mayurkhairkar66@gmail.com"
                 && x.Password == "123456789").SingleOrDefault();*/
 
                 Signup user = dataContext.Signups.Where(query => query.Email.Equals(model.Email) && query.Password.Equals(model.Password)).SingleOrDefault();
-                if(user.Email=="phaniveludurthi@gmail.com" && user.Password == "123456789")
+                if(user.Email=="mayurkhairkar66@gmail.com" && user.Password == "123456789")
                 {
                     return user;
                 }
